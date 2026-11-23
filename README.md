@@ -78,6 +78,7 @@ Analisis hasil:
 4. Pindahkan seluruh function ke `helpers.php` dan panggil dari minimal dua halaman berbeda.
 
 | Nilai | Predikat |
+| :--- | ---: |
 | 85-100 | A (Sangat Baik) |
 | 70-84 | B (Baik) |
 | 60-69 | C (Cukup) |
@@ -110,6 +111,7 @@ Rute valid dapat diakses, rute tidak dikenal menghasilkan status 404, dan strukt
 
 Daftar rute:
 | Rute	| File	| Keterangan |
+| :--- | :---: | ---: |
 | `home` (default) |	`views/home.php`	| Halaman beranda |
 |`about`	| `views/about.php`	| Tentang aplikasi |
 | `kontak`	| `views/kontak.php`	| Kontak |
@@ -120,6 +122,7 @@ Daftar rute:
 
 Pengujian dan output:
 |Pengujian	| URL	| Hasil |
+| :--- | :---: | ---: |
 | Rute default |	`index.php`	| Home tampil
 | Rute valid	| `index.php?page=fungsi/suhu`	| Form suhu tampil |
 | Tidak terdaftar	| `index.php?page=admin/rahasia` |	404 |
@@ -142,6 +145,7 @@ Operasi CRUD tetap berjalan, koneksi database hanya dikelola pada satu file konf
 
 Pemetaan file dari praktikum 8:
 | Praktikum 8 |	Praktikum 9 |
+| :--- | ---: |
 | `koneksi.php` |	`config/database.php` |
 | `index.php` |	`modules/barang/list.php` |
 | `tambah.php` |	`modules/barang/add.php` |
@@ -153,6 +157,7 @@ Pemetaan file dari praktikum 8:
 Daftar rute:
 
 | Rute |	Keterangan |
+| :--- | ---: |
 | `dashboard` (default)	| Ringkasan data |
 | `barang/list`	| Daftar barang |
 | `barang/add`	| Tambah barang |
@@ -190,6 +195,7 @@ Halaman 404:
 ### Kendala dan Cara Mengatasinya
 
 | Kendala |	Penyebab	| Solusi |
+| :--- | :---: | ---: |
 | `Failed opening required ... header.php`	| File tidak berada di folder `views/` karena struktur folder tidak utuh	| Susun ulang folder sesuai struktur, atau ekstrak zip agar folder terbentuk utuh |
 | CSS tidak tampil	| Path `style.css` salah	| Periksa path CSS dan lokasi file lewat DevTools (tab Network) |
 | Header dan footer tampil ganda	| File konten masih memanggil header/footer, padahal sudah dimuat router	| Hapus `require` header/footer dari file konten |
